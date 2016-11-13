@@ -1,14 +1,20 @@
-float load = 0;//lines
+float load = 0;//for the dots
+PFont f; //for the font
+float moveMent; //for the movement of the letter
+float speed;//for the speed of the text
 
 void setup()
 {
   size(1500,1000);
+  //for the font of the Program
+  f = createFont("Bauhaus93",50,true);
 }
 
 void draw()
 {
   background(0);
   
+  //While loop for the lines and dots around the program
   int x = 10;
   int y = 10;
   while (x < load)
@@ -28,6 +34,23 @@ void draw()
     line(20,20,20,980);
     line(1480,20,1480,980);
   }
-  
-  load = load + 5;
+    //For the letters
+    fill(#03F4FF);
+    textAlign(CENTER);
+    textSize(20);
+    text("Spaceship Alpha Beta 3.5",moveMent,50);
+    
+    //To move the text
+    moveMent = moveMent + speed;
+    
+    if (moveMent > 700)
+    {
+      speed = -10;
+    }
+    if (moveMent < 750)
+    {
+      speed = 10;
+    }
+    //the speed in which the dots go to the right
+    load = load + 10;
 }
