@@ -14,7 +14,7 @@ float angle3 = 0;//for the fuel
 
 void setup()
 {
-  size(1000,750);
+  fullScreen();
   //for the font of the Program
   f = createFont("Bauhaus93",50,true);
   smooth();
@@ -34,19 +34,19 @@ void draw()
   while (x < load)
   {
     strokeWeight(2);
-    stroke(#03F4FF);
-    line(x, 10, x, 10);
+    stroke(#03F4FF);//blue
+    line(x, 10, x, 10);//upper dot blue
     x = x + 10;
-    line(y, 740, y, 740);
+    line(y, 1070, y, 1070);//lower dot blue
     y = y + 10;
-    line(10,10,10,740);
-    line(990,10,990,740);
-    stroke(#F6FF03);
+    line(10,10,10,1070);//left blue
+    line(1910,10,1910,1070);//right blue
+    stroke(#F6FF03);//yellow
     strokeWeight(1);
-    line(x,20,x,20);
-    line(y,730,y,730);
-    line(20,20,20,730);
-    line(980,20,980,730);
+    line(x,20,x,20);//upper dot yellow
+    line(y,1060,y,1060);//lower dot yellow
+    line(20,20,20,1060);//left yellow
+    line(1900,20,1900,1060);//right yellow
   }
     //For the letters
     fill(#03F4FF);
