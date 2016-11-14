@@ -1,10 +1,11 @@
 //import processing.sound.*;
 //SoundFile sound;
 
+Clock c;//for the buttons
+Letters l;//for the letters
+
 float load = 0;//for the dots
 PFont f; //for the font
-float moveMent; //for the movement of the letter
-float speed;//for the speed of the text
 float r = 0;//to rotate the circle
 float a = 0;//to rotate circle
 float b = 0; // to rotate circle
@@ -19,6 +20,12 @@ void setup()
   f = createFont("Bauhaus93",50,true);
   smooth();
   
+  //for the clock
+  c = new Clock();
+  
+  //letters
+  l = new Letters();
+  
   //load soundfile
   //sound = new SoundFile(this, "Robot_blip_2-Marianne_Gagnon-299056732.mp3");
   //sound.play();
@@ -27,7 +34,7 @@ void setup()
 void draw()
 {
   background(0);
-  
+  l.display();
   //While loop for the lines and dots around the program
   int x = 10;
   int y = 10;
@@ -48,26 +55,6 @@ void draw()
     line(20,20,20,1060);//left yellow
     line(1900,20,1900,1060);//right yellow
   }
-    //For the letters
-    fill(#03F4FF);
-    textAlign(CENTER);
-    textSize(20);
-    text("Spaceship Alpha Beta 3.5",moveMent,50);
-    //textAlign(RIGHT);
-    //textSize(15);
-    //text("Welcome user 123",900,80);
-    
-    //To move the text
-    moveMent = moveMent + speed;
-    
-    if (moveMent > 400)
-    {
-      speed = -10;
-    }
-    if (moveMent < 500)
-    {
-      speed = 10;
-    }
     //the speed in which the dots go to the right
     load = load + 10;
     
@@ -110,29 +97,7 @@ void draw()
     line(700,720,700,600);
     popMatrix();
     
-    //For the clock
-    stroke(255);
-    ellipse(width/2,600,150,150);
-
-    float s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI;
- 
-    float m = map(minute(), 0, 60, 0, TWO_PI) - HALF_PI;
-
-    float h = map(hour() % 12, 0, 12, 0, TWO_PI) - HALF_PI;
-    
-    //the minute
-    stroke(#03F4FF);
-    strokeWeight(1);
-    line(100, 100, cos(s) * 72 + 100, sin(s) * 72 + 100);
-
-    //the seconds
-    stroke(#F6FF03);
-    strokeWeight(2);
-    line(100, 100, cos(m) * 60 + 100, sin(m) * 60 + 100);
-    
-    //the hour
-    strokeWeight(4);
-    line(100, 100, cos(h) * 50 + 100, sin(h) * 50 + 100);
+    c.display();
     
 }
 
