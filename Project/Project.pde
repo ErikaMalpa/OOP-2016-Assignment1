@@ -1,4 +1,5 @@
-float load = 0;//for the dots
+//Clock c;//for the buttons
+
 PFont f; //for the font
 float moveMent; //for the movement of the letter
 float speed;//for the speed of the text
@@ -8,11 +9,14 @@ float[] speeds = new float[100];
 
 void setup()
 {
-  fullScreen();
+  fullScreen(P3D);
   f = createFont("Bauhaus93",50,true);
   
   //for the stars
   int i = 0;
+  
+  //for the clock
+  //c = new Clock();
   
   while(i<100)
   {
@@ -27,6 +31,9 @@ void draw()
 {
   background(0);
   
+  //c.display();
+  
+  lights();
   stroke(255);
   //star
   {
@@ -64,28 +71,19 @@ void draw()
       speed = 10;
     }
     
-  //While loop for the lines and dots around the program
-  int x = 10;
-  int y = 10;
-  while (x < load)
-  {
+    //While loop for the lines and dots around the program
     strokeWeight(2);
     stroke(#03F4FF);//blue
-    line(x, 10, x, 10);//upper dot blue
-    x = x + 10;
-    line(y, 1070, y, 1070);//lower dot blue
-    y = y + 10;
+    line(10, 10, 1910, 10);//upper dot blue
+    line(10, 1070, 1910, 1070);//lower dot blue
     line(10,10,10,1070);//left blue
     line(1910,10,1910,1070);//right blue
     stroke(#F6FF03);//yellow
     strokeWeight(1);
-    line(x,20,x,20);//upper dot yellow
-    line(y,1060,y,1060);//lower dot yellow
+    line(20,20,1900,20);//upper dot yellow
+    line(20,1060,1900,1060);//lower dot yellow
     line(20,20,20,1060);//left yellow
     line(1900,20,1900,1060);//right yellow
-  }
-    //the speed in which the dots go to the right
-    load = load + 10;
     
     //window"
     noFill();
@@ -99,4 +97,16 @@ void draw()
     noStroke();
     ellipse(230,870,300,300);//left thing circle
     ellipse(1690,870,300,300);//right thing circle
+    
+    fill(#FBFF2C);
+    arc(230, 870, 200, 200, 0, PI+QUARTER_PI, OPEN);//left
+    arc(1690,870, 200, 200, 0, PI+QUARTER_PI, OPEN);//right
+    fill(#3BEA80);
+    arc(230, 870, 100, 100, PI+QUARTER_PI, TWO_PI);//left
+    arc(1690, 870, 100, 100, PI+QUARTER_PI, TWO_PI);//left
+    
+    noFill();
+    stroke(255);
+    translate(500, height * 0.50, 50);
+    sphere(50);
 }
