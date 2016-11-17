@@ -1,11 +1,17 @@
-PFont f;
+//C15339871
+//Erika Secillano
 
+PFont f;
+Stars S;
 
 void setup()
 {
   fullScreen();
   f = loadFont("AgencyFB-Reg-48.vlw");
   textFont(f);
+  
+  //for the stars
+  S = new Stars();
 }
 
 void draw()
@@ -22,7 +28,8 @@ void draw()
       textAlign(CENTER);
       fill(0);
       textSize(200);
-      text("Please press enter", width/2, height/2);
+      text("Welcome", width/2, height/2);
     }
   }
+  S.display();
 }
