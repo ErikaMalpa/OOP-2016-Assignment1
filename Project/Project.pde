@@ -1,4 +1,6 @@
 //Clock c;//for the buttons
+//Checkboard ch;//checkboard
+Button b;
 
 PFont f; //for the font
 float moveMent; //for the movement of the letter
@@ -18,6 +20,12 @@ void setup()
   //for the clock
   //c = new Clock();
   
+  //checkboard
+  //ch = new Checkboard();
+  
+  //button
+  b = new Button();
+  
   while(i<100)
   {
   x[i] = random (460,1900);
@@ -32,6 +40,8 @@ void draw()
   background(0);
   
   //c.display();
+  //ch.display();
+  b.display();
   
   lights();
   stroke(255);
