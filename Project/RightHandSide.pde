@@ -13,19 +13,15 @@ class RightHandSide
 
   PImage img;
   
-    
-  //import ddf.minim.*;
- // Minim minim;
- // AudioPlayer player;
-  
   void display()
   {
     f = createFont("Bauhaus93",50,true);
     img = loadImage("Alien_head_2.jpg");
     
     //sounds
-  //  minim = new Minim(this);
-  //  player = minim.loadFile("Robot_blip_2-Marianne_Gagnon-299056732.mp3");
+    //soundfile = new SoundFile(this,"click.mp3");
+    //minim = new Minim(this);
+   // click = minim.loadFile("click.mp3",2048);
     
   stroke(#41F7BC);
   fill(255);
@@ -35,7 +31,18 @@ class RightHandSide
   rotateY(radians(angle));
   sphere(50);
   popMatrix();
-  if (mousePressed)
+  
+  pushMatrix();
+  if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
+    {
+      stroke(#F2FA23);
+      line(1650,150,1740,150);
+      textSize(30);
+      text("Mission",1650,150);
+    }
+   popMatrix();
+  
+   if (mousePressed)
   {
     if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
     {
@@ -49,7 +56,6 @@ class RightHandSide
       text("-Meet Puma the Maiden",960,400);
       text("-Gather weapons",960,450);
       text("-Eliminate Miko",960,500);
-      //player.play();
     }
   }
   
@@ -60,6 +66,8 @@ class RightHandSide
       line(1650,150,1740,150);
       textSize(30);
       text("Mission",1650,150);
+      click.rewind();
+      click.play();
     }
    popMatrix();
   
@@ -92,6 +100,8 @@ class RightHandSide
       line(1650,350,1740,350);
       textSize(30);
       text("Target",1650,350);
+      click.rewind();
+      click.play();
     }
    popMatrix();
   

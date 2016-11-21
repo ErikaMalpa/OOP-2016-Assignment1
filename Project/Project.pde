@@ -4,7 +4,10 @@ RightHandSide rhs;
 
 PFont f; //for the font
 
-//PImage img;
+//sound
+  import ddf.minim.*;
+  AudioPlayer click;
+  Minim minim;
 
 void setup() {
   fullScreen(P3D);
@@ -15,6 +18,11 @@ void setup() {
   
   //
   rhs = new RightHandSide();
+  
+  //sounds
+    //soundfile = new SoundFile(this,"click.mp3");
+    minim = new Minim(this);
+    click = minim.loadFile("click.mp3",2048);
 }
 
 void draw()
@@ -24,7 +32,7 @@ void draw()
   
   ci.display();
   rhs.display();
-  
+
   fill(#03F4FF);
     textAlign(CENTER);
     textSize(20);
