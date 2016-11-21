@@ -2,19 +2,10 @@ Circle ci;//for the circle
 
 RightHandSide rhs;
 
-// I create a variable "speed", it'll be useful to control the speed of stars.
-float speed;
-
 PFont f; //for the font
 
 void setup() {
   fullScreen(P3D);
-  //fill the array with a for loop;
-  // running 800 times, it creates a new star using the Star() class.
-  /*for (int i = 0; i < stars.length; i++) {
-    stars[i] = new Star();
-  }
-  */
   f = createFont("Bauhaus93",50,true);
   
   //circle
@@ -24,18 +15,8 @@ void setup() {
   rhs = new RightHandSide();
 }
 
-void draw() {
-  if(keyPressed)
-  {
-    if(key == 'w' || key == 'W' )
-    {
-      speed = speed + 0.5;
-    }
-    if(key == 's' || key == 'S' )
-    {
-      speed = speed - 0.1;
-    }
-   }
+void draw()
+{
 
   background(0);
   
@@ -74,15 +55,4 @@ void draw() {
     noFill();
     stroke(255);
     rect(25, 60, 1870,600, 7);
-/*    
-  // I shift the entire composition,
-  // moving its center from the top left corner to the center of the canvas.
-  translate(width/2, height/2);
-  // I draw each star, running the "update" method to update its position and
-  // the "show" method to show it on the canvas.
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
-  }
-  */
 }

@@ -1,4 +1,3 @@
-
 //This is for the right hand side
 class RightHandSide
 {
@@ -48,4 +47,4 @@ PFont f;
     angle=0; // keep in degree
   }
   }
-  
+}
