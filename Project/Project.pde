@@ -4,6 +4,8 @@ RightHandSide rhs;
 
 PFont f; //for the font
 
+//PImage img;
+
 void setup() {
   fullScreen(P3D);
   f = createFont("Bauhaus93",50,true);
