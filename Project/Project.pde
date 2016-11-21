@@ -1,12 +1,21 @@
+/* 
+  OOP Assignment #1
+  Course/Year : DT282/2
+  Name:Erika Secillano
+  Student No.:C15339871 
+*/
+
+
+
 Circle ci;//for the circle
-
-RightHandSide rhs;
-
+RightHandSide rhs;//for the globes on the right hand side
+Text t;//For the text moving across
 PFont f; //for the font
 
 //sound
   import ddf.minim.*;
-  AudioPlayer click;
+  AudioPlayer hover;
+  AudioPlayer press;
   Minim minim;
 
 void setup() {
@@ -20,9 +29,12 @@ void setup() {
   rhs = new RightHandSide();
   
   //sounds
-    //soundfile = new SoundFile(this,"click.mp3");
-    minim = new Minim(this);
-    click = minim.loadFile("click.mp3",2048);
+   minim = new Minim(this);
+   hover = minim.loadFile("click.mp3");
+   //press = minim.loadFile("press.mp3");
+   
+   //for the moving text
+   t = new Text();
 }
 
 void draw()
@@ -30,8 +42,11 @@ void draw()
 
   background(0);
   
+  t.display();
   ci.display();
   rhs.display();
+  rhs.clicks();
+  
 
   fill(#03F4FF);
     textAlign(CENTER);

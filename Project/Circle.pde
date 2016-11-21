@@ -1,3 +1,4 @@
+//the circle in the middle of the screen
 class Circle
 {
   float r = 0;//to rotate the circle

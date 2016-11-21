@@ -1,6 +1,7 @@
 //This is for the right hand side
 //source for the image https://upload.wikimedia.org/wikipedia/commons/f/fd/Alien_head_2.jpg
-//source for sounds blip - http://soundbible.com/1669-Robot-Blip-2.html
+//source for sounds hover - http://soundbible.com/1669-Robot-Blip-2.html
+//click - https://www.freesound.org/people/kickhat/sounds/264447/
 class RightHandSide
 {
  int x = 1800;
@@ -9,19 +10,11 @@ class RightHandSide
  int y3 = 550;
   float angle=-90;
 
-  PFont f; 
-
   PImage img;
   
   void display()
   {
-    f = createFont("Bauhaus93",50,true);
     img = loadImage("Alien_head_2.jpg");
-    
-    //sounds
-    //soundfile = new SoundFile(this,"click.mp3");
-    //minim = new Minim(this);
-   // click = minim.loadFile("click.mp3",2048);
     
   stroke(#41F7BC);
   fill(255);
@@ -33,12 +26,37 @@ class RightHandSide
   popMatrix();
   
   pushMatrix();
+  stroke(#41F7BC);
+  translate(x,y2); 
+  rotateY(radians(angle));
+  sphere(50);
+  popMatrix();
+  
+  pushMatrix();
+  stroke(#41F7BC);
+  translate(x,y3); 
+  rotateY(radians(angle));
+  sphere(50);
+  popMatrix();
+ 
+  angle+=1; // speed
+  if (angle>=360) {
+    angle=0; // keep in degree
+  }
+  }
+  
+  void clicks()
+  {
+    //1st
+    pushMatrix();
   if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
     {
       stroke(#F2FA23);
       line(1650,150,1740,150);
       textSize(30);
       text("Mission",1650,150);
+      hover.rewind();
+      hover.play();
     }
    popMatrix();
   
@@ -56,29 +74,14 @@ class RightHandSide
       text("-Meet Puma the Maiden",960,400);
       text("-Gather weapons",960,450);
       text("-Eliminate Miko",960,500);
+      
+     // press.rewind();
+      //press.play();
     }
   }
-  
-  pushMatrix();
-  if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
-    {
-      stroke(#F2FA23);
-      line(1650,150,1740,150);
-      textSize(30);
-      text("Mission",1650,150);
-      click.rewind();
-      click.play();
-    }
-   popMatrix();
-  
-  pushMatrix();
-  stroke(#41F7BC);
-  translate(x,y2); 
-  rotateY(radians(angle));
-  sphere(50);
-  popMatrix();
-  
-  if (mousePressed)
+    
+    //2nd
+     if (mousePressed)
   {
     if(mouseX > 1700 && mouseX < 1900 && mouseY > 300 && mouseY <400)
     {
@@ -100,31 +103,35 @@ class RightHandSide
       line(1650,350,1740,350);
       textSize(30);
       text("Target",1650,350);
-      click.rewind();
-      click.play();
+      hover.rewind();
+      hover.play();
     }
    popMatrix();
-  
-  pushMatrix();
-  stroke(#41F7BC);
-  translate(x,y3); 
-  rotateY(radians(angle));
-  sphere(50);
-  popMatrix();
-  
-  if (mousePressed)
+    
+    //3rd
+    if (mousePressed)
   {
     if(mouseX > 1700 && mouseX < 1900 && mouseY > 500 && mouseY <600)
     {
       fill(255);
-      textSize(100);
-      text("HI",width/2,height/2);
+      textSize(30);
+      text("Spaceship Battery : 50%",960,300);
+      text("Oxygen Level : 70%",960,340);
+      text("Compression : Normal",960,380);
+      text("Water tank : 45%",960,420);
     }
   }
- 
-  angle+=1; // speed
-  if (angle>=360) {
-    angle=0; // keep in degree
-  }
+  
+   pushMatrix();
+  if(mouseX > 1700 && mouseX < 1900 && mouseY > 500 && mouseY <600)
+    {
+      stroke(#F2FA23);
+      line(1650,550,1740,550);
+      textSize(30);
+      text("Stats",1650,550);
+      hover.rewind();
+      hover.play();
+    }
+   popMatrix();
   }
 }
