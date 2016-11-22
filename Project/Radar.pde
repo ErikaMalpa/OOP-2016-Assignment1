@@ -1,0 +1,7 @@
+class Radar
+{
+  void display()
+  {
+    
+  }
+}

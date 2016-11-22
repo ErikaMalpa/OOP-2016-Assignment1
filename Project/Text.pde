@@ -5,8 +5,9 @@ class Text
   
   void display()
   {
+    pushMatrix();
     textSize(15);
-    stroke(255);
+    stroke(#F8FC30);
     text("Welcome back, check mission update and user target",x,y);
     x++;
     
@@ -15,5 +16,6 @@ class Text
     {
       x = 200;
     }
+    popMatrix();
   }
 }

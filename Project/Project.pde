@@ -7,15 +7,17 @@
 
 
 
-Circle ci;//for the circle
-RightHandSide rhs;//for the globes on the right hand side
-Text t;//For the text moving across
-PFont f; //for the font
+  Circle ci;//for the circle
+  RightHandSide rhs;//for the globes on the right hand side
+  Text t;//For the text moving across
+  Button bu;//for the 6 buttons
+  BottomBackGround bbg;//for the bottom background
+  PFont f; //for the font
 
-//sound
+  //sound
   import ddf.minim.*;
   AudioPlayer hover;
-  AudioPlayer press;
+  AudioPlayer backgroundSong;
   Minim minim;
 
 void setup() {
@@ -31,10 +33,17 @@ void setup() {
   //sounds
    minim = new Minim(this);
    hover = minim.loadFile("click.mp3");
-   //press = minim.loadFile("press.mp3");
+   backgroundSong = minim.loadFile("Arcade.wav");
+   backgroundSong.loop();
    
    //for the moving text
    t = new Text();
+   
+   //for music
+   bu = new Button();
+   
+   //for the bottombackground
+   bbg = new BottomBackGround();
 }
 
 void draw()
@@ -46,14 +55,17 @@ void draw()
   ci.display();
   rhs.display();
   rhs.clicks();
+  bu.playbutton();
+  bu.pressedbutton();
+  bbg.display();
   
 
   fill(#03F4FF);
-    textAlign(CENTER);
-    textSize(20);
-    text("Spaceship Alpha Beta 3.5",width/2,50);
+  textAlign(CENTER);
+  textSize(20);
+  text("Spaceship Alpha Beta 3.5",width/2,50);
     
-   //for the sides 
+  //for the sides around the screen
   strokeWeight(2);
   stroke(#03F4FF);//blue
   line(10, 10, 1910, 10);//upper dot blue
@@ -67,17 +79,29 @@ void draw()
   line(20,20,20,1060);//left yellow
   line(1900,20,1900,1060);//right yellow
   
-  //for the circles
-  ellipse(230,870,370,370);//left thing circle
-  ellipse(1690,870,370,370);//right thing circle
-   
-  fill(#03F4FF);
-  noStroke();
-  ellipse(230,870,300,300);//left thing circle
-  ellipse(1690,870,300,300);//right thing circle
-  
   //window"
-    noFill();
-    stroke(255);
-    rect(25, 60, 1870,600, 7);
+  noFill();
+  stroke(255);
+  rect(25, 60, 1870,570, 7);
+  
+  //this is for the dots on both sides of the circle
+  pushMatrix();
+  stroke(#FEFF2C);
+  //on the left
+  for (int x = 30; x < 70; x = x+5) 
+    {
+      for (int y = 650;y < 1050; y = y+5) 
+      {
+        point(x, y);
+      }
+    }
+    popMatrix();
+    //on the right
+    for (int h = 1850; h < 1890; h = h+5) 
+    {
+      for (int l = 650; l < 1050; l = l+5) 
+      {
+        point(h, l);
+      }
+    }
 }

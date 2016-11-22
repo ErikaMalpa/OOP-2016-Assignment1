@@ -1,4 +1,4 @@
-//the circle in the middle of the screen
+//the circle in the middle of the screen and the two big ones
 class Circle
 {
   float r = 0;//to rotate the circle
@@ -33,5 +33,13 @@ class Circle
     r = r + 0.1;
     a = a - 0.2;
     b = b + 0.2;
+    
+    //for the two circle
+    float csize = 350;
+    float cy = 840;
+    fill(#94A09E);
+    stroke(#FCED3D);
+    ellipse(250,cy,csize,csize);//left thing circle
+    ellipse(1670,cy,csize,csize);//right thing circle
   }
 }

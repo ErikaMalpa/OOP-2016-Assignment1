@@ -2,6 +2,7 @@
 //source for the image https://upload.wikimedia.org/wikipedia/commons/f/fd/Alien_head_2.jpg
 //source for sounds hover - http://soundbible.com/1669-Robot-Blip-2.html
 //click - https://www.freesound.org/people/kickhat/sounds/264447/
+//arcade - https://www.freesound.org/people/joshuaempyre/sounds/251461/
 class RightHandSide
 {
  int x = 1800;
@@ -14,9 +15,11 @@ class RightHandSide
   
   void display()
   {
+    pushMatrix();
     img = loadImage("Alien_head_2.jpg");
     
   stroke(#41F7BC);
+  //noStroke();
   fill(255);
   lights();
   pushMatrix();
@@ -27,6 +30,7 @@ class RightHandSide
   
   pushMatrix();
   stroke(#41F7BC);
+  //noStroke();
   translate(x,y2); 
   rotateY(radians(angle));
   sphere(50);
@@ -34,6 +38,7 @@ class RightHandSide
   
   pushMatrix();
   stroke(#41F7BC);
+  //noStroke();
   translate(x,y3); 
   rotateY(radians(angle));
   sphere(50);
@@ -43,6 +48,7 @@ class RightHandSide
   if (angle>=360) {
     angle=0; // keep in degree
   }
+  popMatrix();
   }
   
   void clicks()
@@ -75,8 +81,8 @@ class RightHandSide
       text("-Gather weapons",960,450);
       text("-Eliminate Miko",960,500);
       
-     // press.rewind();
-      //press.play();
+     //press.rewind();
+     // press.play();
     }
   }
     
