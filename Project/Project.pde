@@ -18,6 +18,8 @@
   import ddf.minim.*;
   AudioPlayer hover;
   AudioPlayer backgroundSong;
+  AudioPlayer backgroundSong2;
+  AudioPlayer laser;
   Minim minim;
 
 void setup() {
@@ -33,8 +35,9 @@ void setup() {
   //sounds
    minim = new Minim(this);
    hover = minim.loadFile("click.mp3");
+   laser = minim.loadFile("laser.wav");
    backgroundSong = minim.loadFile("Arcade.wav");
-   backgroundSong.loop();
+   backgroundSong2 = minim.loadFile("Ambient2.mp3");
    
    //for the moving text
    t = new Text();
@@ -45,12 +48,25 @@ void setup() {
    //for the bottombackground
    bbg = new BottomBackGround();
 }
-
+float speed = 0;
+float fuel = 10000;
 void draw()
 {
 
   background(0);
-  
+  if(keyPressed)
+  {
+    if(key == 'w' || key == 'W' )
+    {
+      speed = speed + 0.5;
+      fuel = fuel - 0.0005;
+    }
+    if(key == 's' || key == 'S' )
+    {
+      speed = speed - 0.1;
+      fuel = fuel - 0.0005;
+    }
+   }
   t.display();
   ci.display();
   rhs.display();
@@ -58,6 +74,10 @@ void draw()
   bu.playbutton();
   bu.pressedbutton();
   bbg.display();
+  fill(255);
+  textSize(20);
+  text( speed, 250, 850);
+  text( fuel, 1670, 850);
   
 
   fill(#03F4FF);

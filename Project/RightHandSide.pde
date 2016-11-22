@@ -9,8 +9,7 @@ class RightHandSide
  int y1 = 150;
  int y2 = 350;
  int y3 = 550;
-  float angle=-90;
-
+ float angle=-90;
   PImage img;
   
   void display()
@@ -98,6 +97,7 @@ class RightHandSide
       text("EYE COLOUR: Black",960,370);
       text("SKIN COLOUR:Grey",960,410);
       text("HEIGHT:5'0",960,450);
+      text("LOCATION:Planet H85fU 89''09''12",960,490);
       image (img, 890,150);
     }
   }

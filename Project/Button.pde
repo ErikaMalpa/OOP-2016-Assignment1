@@ -1,3 +1,6 @@
+//for the laser = https://www.freesound.org/people/jeremysykes/sounds/341235/
+//for the ambient2 son = https://www.freesound.org/people/cheesepuff/sounds/110215/
+
 class Button
 {
   float x = 500;
@@ -27,65 +30,34 @@ class Button
   {
     if (mousePressed)
     {
-      if(mouseX > 460 && mouseX < 540 && mouseY > 790 && mouseY < 850)
+      if(mouseX > 460 && mouseX < 540 && mouseY > 790 && mouseY < 850)//this would be the laser
       {
-        fill(#F58F3B);
-        textSize(20);
-        text("PROFILE:",960,140);
-        text("NAME: MIKO (A.K.A. = MIKE)",960,330);
-        text("EYE COLOUR: Black",960,370);
-        text("SKIN COLOUR:Grey",960,410);
-        text("HEIGHT:5'0",960,450);
+        stroke(#FF1212);
+        line(940,height/2,600,625);
+        line(980,height/2,1320,625);
+        laser.rewind();
+        laser.play();
       }
-            if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)
+       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would be the normal gun
       {
-        fill(255);
-        textSize(20);
-        text("PROFILE:",960,140);
-        text("NAME: MIKO (A.K.A. = MIKE)",960,330);
-        text("EYE COLOUR: Black",960,370);
-        text("SKIN COLOUR:Grey",960,410);
-        text("HEIGHT:5'0",960,450);
+        
       }
             if(mouseX > 460 + 200 && mouseX < 540 + 200 && mouseY > 790 && mouseY < 850)
       {
-        fill(255);
-        textSize(20);
-        text("PROFILE:",960,140);
-        text("NAME: MIKO (A.K.A. = MIKE)",960,330);
-        text("EYE COLOUR: Black",960,370);
-        text("SKIN COLOUR:Grey",960,410);
-        text("HEIGHT:5'0",960,450);
+        
       }
             if(mouseX > 460 + 700 && mouseX < 540 + 700 && mouseY > 790 && mouseY < 850)
       {
-        fill(255);
-        textSize(20);
-        text("PROFILE:",960,140);
-        text("NAME: MIKO (A.K.A. = MIKE)",960,330);
-        text("EYE COLOUR: Black",960,370);
-        text("SKIN COLOUR:Grey",960,410);
-        text("HEIGHT:5'0",960,450);
+        backgroundSong2.loop();
       }
             if(mouseX > 460 + 800 && mouseX < 540 + 800 && mouseY > 790 && mouseY < 850)
       {
-        fill(255);
-        textSize(20);
-        text("PROFILE:",960,140);
-        text("NAME: MIKO (A.K.A. = MIKE)",960,330);
-        text("EYE COLOUR: Black",960,370);
-        text("SKIN COLOUR:Grey",960,410);
-        text("HEIGHT:5'0",960,450);
+        backgroundSong.pause();
+        backgroundSong2.pause();
       }
             if(mouseX > 460 + 900 && mouseX < 540 + 900 && mouseY > 790 && mouseY < 850)
       {
-        fill(255);
-        textSize(20);
-        text("PROFILE:",960,140);
-        text("NAME: MIKO (A.K.A. = MIKE)",960,330);
-        text("EYE COLOUR: Black",960,370);
-        text("SKIN COLOUR:Grey",960,410);
-        text("HEIGHT:5'0",960,450);
+        backgroundSong.loop();
       }
     }
   }

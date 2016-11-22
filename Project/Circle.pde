@@ -41,5 +41,11 @@ class Circle
     stroke(#FCED3D);
     ellipse(250,cy,csize,csize);//left thing circle
     ellipse(1670,cy,csize,csize);//right thing circle
+    fill(#0DFFF1);
+    ellipse(250,cy,csize - 100,csize - 100);//left rhing circle
+    ellipse(1670,cy,csize - 100,csize - 100);//right thing circle
+    fill(0);
+    ellipse(250,cy,csize - 200,csize - 200);//left rhing circle
+    ellipse(1670,cy,csize - 200,csize - 200);//right thing circle
   }
 }
