@@ -15,6 +15,9 @@
   //SineWave sw;
   Time ti;
   PFont f; //for the font
+  
+  float speed = 0;
+  float fuel = 10000;
 
   //sound
   import ddf.minim.*;
@@ -23,6 +26,7 @@
   AudioPlayer backgroundSong2;
   AudioPlayer laser;
   AudioPlayer radar;
+  AudioPlayer intro;
   Minim minim;
 
 void setup() {
@@ -42,7 +46,9 @@ void setup() {
    backgroundSong = minim.loadFile("Arcade.wav");
    backgroundSong2 = minim.loadFile("Ambient2.mp3");
    radar = minim.loadFile("Radar.wav");
+   intro = minim.loadFile("intro.wav");
    radar.loop();
+   intro.play();
    
    //for the moving text
    t = new Text();
@@ -62,8 +68,8 @@ void setup() {
    //time
    ti = new Time();
 }
-float speed = 0;
-float fuel = 10000;
+
+
 void draw()
 {
 
