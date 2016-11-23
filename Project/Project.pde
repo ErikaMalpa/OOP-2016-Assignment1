@@ -6,13 +6,14 @@
 */
 
 
-
   Circle ci;//for the circle
   RightHandSide rhs;//for the globes on the right hand side
   Text t;//For the text moving across
   Button bu;//for the 6 buttons
   BottomBackGround bbg;//for the bottom background
-  Radar rad;
+  Radar rad;//for the radar
+  //SineWave sw;
+  Time ti;
   PFont f; //for the font
 
   //sound
@@ -54,6 +55,12 @@ void setup() {
    
    //for the radar
    rad = new Radar();
+   
+   //sinewave
+   //sw = new SineWave();
+   
+   //time
+   ti = new Time();
 }
 float speed = 0;
 float fuel = 10000;
@@ -83,6 +90,9 @@ void draw()
   bu.Button2();
   bbg.display();
   rad.show();
+ // sw.display();
+ ti.display();
+ 
   fill(255);
   textSize(20);
   text( speed, 250, 850);

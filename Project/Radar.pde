@@ -1,10 +1,5 @@
 class Radar
-{
-  /*float x = 950;
-  float y = 850;
-  float z = 400;
-  float r = 0;*/
-  
+{ 
   float x = 950;
   float y = 850;
   float z = 400;
@@ -28,3 +23,5 @@ class Radar
     angle -= speed;
   }
 }
+
+//sound for the radar =https://www.freesound.org/people/thomasevd/sounds/125374/
