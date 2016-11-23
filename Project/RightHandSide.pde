@@ -98,7 +98,7 @@ class RightHandSide
       text("SKIN COLOUR:Grey",960,410);
       text("HEIGHT:5'0",960,450);
       text("LOCATION:Planet H85fU 89''09''12",960,490);
-      image (img, 890,150);
+      image (img, 890,150); //breed= backhead dominated alien
     }
   }
   
@@ -121,10 +121,10 @@ class RightHandSide
     {
       fill(255);
       textSize(30);
-      text("Spaceship Battery : 50%",960,300);
+      text("Spaceship Energy : 50%",960,300);
       text("Oxygen Level : 70%",960,340);
       text("Compression : Normal",960,380);
-      text("Water tank : 45%",960,420);
+      text("H20 : 45%",960,420);//shield
     }
   }
   

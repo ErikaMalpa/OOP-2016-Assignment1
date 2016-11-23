@@ -12,6 +12,7 @@
   Text t;//For the text moving across
   Button bu;//for the 6 buttons
   BottomBackGround bbg;//for the bottom background
+  Radar rad;
   PFont f; //for the font
 
   //sound
@@ -20,6 +21,7 @@
   AudioPlayer backgroundSong;
   AudioPlayer backgroundSong2;
   AudioPlayer laser;
+  AudioPlayer radar;
   Minim minim;
 
 void setup() {
@@ -38,6 +40,8 @@ void setup() {
    laser = minim.loadFile("laser.wav");
    backgroundSong = minim.loadFile("Arcade.wav");
    backgroundSong2 = minim.loadFile("Ambient2.mp3");
+   radar = minim.loadFile("Radar.wav");
+   radar.loop();
    
    //for the moving text
    t = new Text();
@@ -47,6 +51,9 @@ void setup() {
    
    //for the bottombackground
    bbg = new BottomBackGround();
+   
+   //for the radar
+   rad = new Radar();
 }
 float speed = 0;
 float fuel = 10000;
@@ -73,7 +80,9 @@ void draw()
   rhs.clicks();
   bu.playbutton();
   bu.pressedbutton();
+  bu.Button2();
   bbg.display();
+  rad.show();
   fill(255);
   textSize(20);
   text( speed, 250, 850);
