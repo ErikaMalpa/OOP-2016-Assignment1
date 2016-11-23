@@ -16,3 +16,5 @@ Resources used such as music and pictures:
 //source for sounds hover - http://soundbible.com/1669-Robot-Blip-2.html
 
 //arcade - https://www.freesound.org/people/joshuaempyre/sounds/251461/
+
+//website that created the intro voice - radar = minim.loadFile("Radar.wav");
