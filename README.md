@@ -17,4 +17,4 @@ Resources used such as music and pictures:
 
 //arcade - https://www.freesound.org/people/joshuaempyre/sounds/251461/
 
-//website that created the intro voice - radar = minim.loadFile("Radar.wav");
+//website that created the intro voice - http://lingojam.com/RobotVoiceGenerator
