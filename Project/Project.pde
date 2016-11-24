@@ -30,7 +30,6 @@
   AudioPlayer intro;
   AudioPlayer stats;
   AudioPlayer profile;
-  AudioPlayer mission;
   Minim minim;
 
 void setup() {
@@ -53,7 +52,6 @@ void setup() {
    intro = minim.loadFile("intro.wav");
    stats = minim.loadFile("stats.wav");
    profile = minim.loadFile("profile.wav");
-   mission = minim.loadFile("mission.wav");
    radar.loop();
    intro.play();
    

@@ -76,8 +76,9 @@ class RightHandSide
       text("-Meet Puma the Maiden",960,400);
       text("-Gather weapons",960,450);
       text("-Eliminate Miko",960,500);
-      mission.rewind();
-      mission.play();
+      
+     //press.rewind();
+     // press.play();
     }
   }
     

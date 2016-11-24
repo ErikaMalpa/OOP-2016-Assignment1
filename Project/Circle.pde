@@ -30,19 +30,18 @@ class Circle
     fill(0);
     
     //to rotate the ellipse
-    r = r + 1;
+    r = r + 0.1;
     a = a - 0.2;
-    b = b - 0.2;
+    b = b + 0.2;
     
     //for the two circle
     float csize = 350;
     float cy = 840;
-    
     noFill();
     stroke(#FCED3D);
     ellipse(250,cy,csize,csize);//left thing circle
     ellipse(1670,cy,csize,csize);//right thing circle
-    fill(#9FE6E8);
+    fill(#ADF7FF);
     arc(250,cy,csize,csize, HALF_PI, PI);
     arc(250,cy,csize,csize, PI+QUARTER_PI, TWO_PI);
     arc(1670,cy,csize,csize, HALF_PI, PI);
@@ -55,7 +54,7 @@ class Circle
     arc(250,cy,csize - 100,csize - 100, 0, HALF_PI + QUARTER_PI);
     arc(1670,cy,csize - 100,csize - 100, 0, HALF_PI + QUARTER_PI);
     fill(0);
-    ellipse(250,cy,csize - 200,csize - 200);//left thing circle
+    ellipse(250,cy,csize - 200,csize - 200);//left rhing circle
     ellipse(1670,cy,csize - 200,csize - 200);//right thing circle
   }
 }
