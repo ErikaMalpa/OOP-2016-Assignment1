@@ -10,10 +10,11 @@
   RightHandSide rhs;//for the globes on the right hand side
   Text t;//For the text moving across
   Button bu;//for the 6 buttons
-  BottomBackGround bbg;//for the bottom background
   Radar rad;//for the radar
   //SineWave sw;
-  Time ti;
+  Time ti;//time and date
+  Background bg;//for the background
+  
   PFont f; //for the font
   
   float speed = 0;
@@ -27,6 +28,8 @@
   AudioPlayer laser;
   AudioPlayer radar;
   AudioPlayer intro;
+  AudioPlayer stats;
+  AudioPlayer profile;
   Minim minim;
 
 void setup() {
@@ -47,6 +50,8 @@ void setup() {
    backgroundSong2 = minim.loadFile("Ambient2.mp3");
    radar = minim.loadFile("Radar.wav");
    intro = minim.loadFile("intro.wav");
+   stats = minim.loadFile("stats.wav");
+   profile = minim.loadFile("profile.wav");
    radar.loop();
    intro.play();
    
@@ -56,9 +61,6 @@ void setup() {
    //for music
    bu = new Button();
    
-   //for the bottombackground
-   bbg = new BottomBackGround();
-   
    //for the radar
    rad = new Radar();
    
@@ -67,12 +69,14 @@ void setup() {
    
    //time
    ti = new Time();
+   
+   //for the background
+   bg = new Background();
 }
 
 
 void draw()
 {
-
   background(0);
   if(keyPressed)
   {
@@ -94,10 +98,10 @@ void draw()
   bu.playbutton();
   bu.pressedbutton();
   bu.Button2();
-  bbg.display();
   rad.show();
  // sw.display();
  ti.display();
+ bg.draw();
  
   fill(255);
   textSize(20);

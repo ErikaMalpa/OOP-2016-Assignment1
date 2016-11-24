@@ -23,5 +23,3 @@ class Radar
     angle -= speed;
   }
 }
-
-//sound for the radar =https://www.freesound.org/people/thomasevd/sounds/125374/

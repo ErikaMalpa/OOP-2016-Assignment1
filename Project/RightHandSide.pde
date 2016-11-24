@@ -1,8 +1,5 @@
 //This is for the right hand side
-//source for the image https://upload.wikimedia.org/wikipedia/commons/f/fd/Alien_head_2.jpg
-//source for sounds hover - http://soundbible.com/1669-Robot-Blip-2.html
-//click - https://www.freesound.org/people/kickhat/sounds/264447/
-//arcade - https://www.freesound.org/people/joshuaempyre/sounds/251461/
+
 class RightHandSide
 {
  int x = 1800;
@@ -99,6 +96,8 @@ class RightHandSide
       text("HEIGHT:5'0",960,450);
       text("LOCATION:Planet H85fU 89''09''12",960,490);
       image (img, 890,150); //breed= backhead dominated alien
+      profile.rewind();
+      profile.play();
     }
   }
   
@@ -125,6 +124,8 @@ class RightHandSide
       text("Oxygen Level : 70%",960,340);
       text("Compression : Normal",960,380);
       text("H20 : 45%",960,420);//shield
+      stats.rewind();
+      stats.play();
     }
   }
   
