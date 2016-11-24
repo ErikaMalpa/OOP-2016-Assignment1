@@ -1,3 +1,8 @@
+/*
+  This will show the date and the time stamp when the user opens the program, currently I dont know
+  how to make the time move.
+*/
+
 class Time
 {
   int s = second();

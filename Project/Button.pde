@@ -1,4 +1,12 @@
-
+/*
+  This class is for the 6 buttons on the screen
+  Button 1 = This is the laser button, I have used lines to act as a laser and of course I added sound to make it more "realistic".
+  Button 2 = This is a pie chart that shows the user's "Storage" in their "spaceship", it is a fixed value and cannot be changed unless you change it here.
+  Button 3 = This is for the clock.
+  Button 4 = This button will play a relaxing song.
+  Button 5 = This button will stop the robot voices from the "RightHandSide" class and also button's 4 and 6 songs.
+  Button 6 = This button will play an arcade song.
+*/
 
 class Button
 {
@@ -11,6 +19,7 @@ class Button
   
   void playbutton()
   {
+    //left side 3 buttons
     fill(#1CFFF9);
     ellipse(x,y,size,size);
     ellipse(x + 100, y , size, size);
@@ -19,6 +28,7 @@ class Button
     ellipse(x + 800, y , size, size);
     ellipse(x + 900, y , size, size);
     
+    //right side 3 buttons
     fill(0);
     ellipse(x,y,size2,size2);
     ellipse(x + 100, y , size2, size2);
@@ -32,7 +42,7 @@ class Button
   {
     if (mousePressed)
     {
-      if(mouseX > 460 && mouseX < 540 && mouseY > 790 && mouseY < 850)//this would be the laser
+      if(mouseX > 460 && mouseX < 540 && mouseY > 790 && mouseY < 850)//this would be the laser and the first button, this will play a laser sound as well
       {
         stroke(#FF1212);
         line(940,height/2,600,625);
@@ -40,7 +50,7 @@ class Button
         laser.rewind();
         laser.play();
       }
-       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would be the normal gun
+       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would be the 
       {
         Storages(400,storage);
         textSize(30);
@@ -53,20 +63,23 @@ class Button
         text("Missiles 20%",1050,350);
         text("HMG Ammo 10%",850,380);
       }
-            if(mouseX > 460 + 200 && mouseX < 540 + 200 && mouseY > 790 && mouseY < 850)
-      {
-        
+            if(mouseX > 460 + 200 && mouseX < 540 + 200 && mouseY > 790 && mouseY < 850)//this will display the clock
+      { 
+        cl.display();
       }
-            if(mouseX > 460 + 700 && mouseX < 540 + 700 && mouseY > 790 && mouseY < 850)
+            if(mouseX > 460 + 700 && mouseX < 540 + 700 && mouseY > 790 && mouseY < 850)//this will play the relaxing song
       {
         backgroundSong2.loop();
       }
-            if(mouseX > 460 + 800 && mouseX < 540 + 800 && mouseY > 790 && mouseY < 850)
+            if(mouseX > 460 + 800 && mouseX < 540 + 800 && mouseY > 790 && mouseY < 850)//this will pause the song from button 4 and 6 and als the "RightHandSide" class's robot voice.
       {
         backgroundSong.pause();
         backgroundSong2.pause();
+        mission.pause();
+        stats.pause();
+        profile.pause();
       }
-            if(mouseX > 460 + 900 && mouseX < 540 + 900 && mouseY > 790 && mouseY < 850)
+            if(mouseX > 460 + 900 && mouseX < 540 + 900 && mouseY > 790 && mouseY < 850)//this will play an arcade song
       {
         backgroundSong.loop();
       }
@@ -94,11 +107,11 @@ class Button
     }
   }
  
-  //Planning to add some random circles
+  //This is for the little circles around
   void Button2()
   { 
     int cy = 30;
-    int csize = 30;
+    int csize = 5;
     noStroke();
     fill(#F7F3D2);
     ellipse(400,cy,csize,csize);//left thing circle

@@ -1,3 +1,7 @@
+/*
+  This will have a text moving above the "window"
+*/
+
 class Text
 {
   float x = 200;

@@ -1,3 +1,7 @@
+/*
+  A "radar" for the spaceship
+*/
+
 class Radar
 { 
   float x = 950;

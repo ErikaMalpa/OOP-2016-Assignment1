@@ -1,57 +1,57 @@
-//This is for the right hand side
+/*
+  This is for the right hand side of the "window", it has 3 globes that is going around
+  Globe 1 = Shows mission for the user and also reads it to user
+  Globe 2 = Shows Target for the mission and some information about the target, it also reads it to the user
+  Globe 3 = Shows the status of the ship
+*/
 
 class RightHandSide
 {
- int x = 1800;
- int y1 = 150;
- int y2 = 350;
- int y3 = 550;
- float angle=-90;
-  PImage img;
+  int x = 1800;
+  int y1 = 150;
+  int y2 = 350;
+  int y3 = 550;
+  float angle=90;
+  PImage img; //This will load the alien Image
   
   void display()
   {
     pushMatrix();
     img = loadImage("Alien_head_2.jpg");
     
-  stroke(#41F7BC);
-  //noStroke();
-  fill(255);
-  lights();
-  pushMatrix();
-  translate(x,y1); 
-  rotateY(radians(angle));
-  sphere(50);
-  popMatrix();
+    stroke(#41F7BC);
+    fill(255);
+    lights();
+    pushMatrix();
+    translate(x,y1); 
+    rotateY(radians(angle));
+    sphere(50);
+    popMatrix();
   
-  pushMatrix();
-  stroke(#41F7BC);
-  //noStroke();
-  translate(x,y2); 
-  rotateY(radians(angle));
-  sphere(50);
-  popMatrix();
-  
-  pushMatrix();
-  stroke(#41F7BC);
-  //noStroke();
-  translate(x,y3); 
-  rotateY(radians(angle));
-  sphere(50);
-  popMatrix();
+    pushMatrix();
+    stroke(#41F7BC);
+    translate(x,y2); 
+    rotateY(radians(angle));
+    sphere(50);
+    popMatrix();
+    
+    pushMatrix();
+    stroke(#41F7BC);
+    translate(x,y3); 
+    rotateY(radians(angle));
+    sphere(50);
+    popMatrix();
  
-  angle+=1; // speed
-  if (angle>=360) {
-    angle=0; // keep in degree
-  }
-  popMatrix();
-  }
+    angle+=1;//the speed of the Globe
+    
+    popMatrix();
+}
   
   void clicks()
   {
-    //1st
+    //1st Globe
     pushMatrix();
-  if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
+    if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
     {
       stroke(#F2FA23);
       line(1650,150,1740,150);
@@ -81,7 +81,7 @@ class RightHandSide
     }
   }
     
-    //2nd
+    //2nd Globe
      if (mousePressed)
   {
     if(mouseX > 1700 && mouseX < 1900 && mouseY > 300 && mouseY <400)
@@ -112,7 +112,7 @@ class RightHandSide
     }
    popMatrix();
     
-    //3rd
+    //3rd Globe
     if (mousePressed)
   {
     if(mouseX > 1700 && mouseX < 1900 && mouseY > 500 && mouseY <600)
