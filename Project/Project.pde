@@ -124,6 +124,7 @@ void draw()
   rhs.clicks();
   bu.playbutton();
   bu.pressedbutton();
+  bu.mouseover();
   bu.Button2();
   rad.show();
   // sw.display();

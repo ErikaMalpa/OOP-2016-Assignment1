@@ -49,6 +49,8 @@ class Button
         line(980,height/2,1320,625);
         laser.rewind();
         laser.play();
+        textSize(10);
+        text("Laser",mouseX,mouseY);
       }
        if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would be the 
       {
@@ -105,6 +107,40 @@ class Button
       arc(960,400, diameter, diameter, lastAngle, lastAngle+radians(storage[i]));
       lastAngle += radians(storage[i]);
     }
+  }
+  
+  void mouseover()
+  {
+    if(mouseX > 460 && mouseX < 540 && mouseY > 790 && mouseY < 850)//this would be the laser and the first button, this will play a laser sound as well
+      {
+        textSize(15);
+        text("Laser",mouseX,mouseY);
+      }
+       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would be the 
+      {
+        textSize(15);
+        text("Storage",mouseX,mouseY);
+      }
+            if(mouseX > 460 + 200 && mouseX < 540 + 200 && mouseY > 790 && mouseY < 850)//this will display the clock
+      { 
+        textSize(15);
+        text("Clock",mouseX,mouseY);
+      }
+            if(mouseX > 460 + 700 && mouseX < 540 + 700 && mouseY > 790 && mouseY < 850)//this will play the relaxing song
+      {
+        textSize(15);
+        text("Relaxing Song",mouseX,mouseY);
+      }
+            if(mouseX > 460 + 800 && mouseX < 540 + 800 && mouseY > 790 && mouseY < 850)//this will pause the song from button 4 and 6 and als the "RightHandSide" class's robot voice.
+      {
+        textSize(15);
+        text("Pause Songs and Robot",mouseX,mouseY);
+      }
+      if(mouseX > 460 + 900 && mouseX < 540 + 900 && mouseY > 790 && mouseY < 850)//this will play an arcade song
+      {
+        textSize(15);
+        text("Arcade Song",mouseX,mouseY);
+      }
   }
  
   //This is for the little circles around
