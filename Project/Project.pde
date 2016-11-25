@@ -118,6 +118,8 @@ void draw()
       fuel = fuel - 0.0005;
     }
    }
+   
+  pl.display();
   t.display();
   ci.display();
   rhs.display();
@@ -130,12 +132,11 @@ void draw()
   // sw.display();
   bg.display();
   ti.display();
-  pl.display();
- 
+  
   fill(255);
-  textSize(20);
-  text( speed, 250, 850);
-  text( fuel, 1670, 850);
+   textSize(20);
+   text( speed, 250, 850);
+   text( fuel, 1670, 850);
   
 
   fill(#03F4FF);

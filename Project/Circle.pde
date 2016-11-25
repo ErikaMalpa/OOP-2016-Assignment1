@@ -1,4 +1,6 @@
-//the circle in the middle of the screen and the two big ones
+/*
+  The rotating circles by the radar and the big circles on both sides
+*/ 
 class Circle
 {
   float r = 0;//to rotate the circle
@@ -25,11 +27,9 @@ class Circle
     
     noStroke();
     ellipse(200,900,60,60);
-    //arc(150, 730, 200, 200, -PI, 0);
-    //arc(850, 730, 200, 200, -PI, 0);
     fill(0);
     
-    //to rotate the ellipse
+    //to rotate the ellipses
     r = r + 1;
     a = a - 0.2;
     b = b - 0.2;

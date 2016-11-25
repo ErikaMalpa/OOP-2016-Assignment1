@@ -11,8 +11,7 @@ class Clock
   void display()
   {
     //For the clock
-    noStroke();
-    
+    stroke(255);
     ellipse(width/2,400,200,200);
 
     float s = map(second(), 0, num, 0, TWO_PI) - HALF_PI;//I subtracted half pie because they all start at the 3 and not at 12
