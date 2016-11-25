@@ -23,6 +23,7 @@
   Planet pl;//for the planet
   
   PFont f; //for the font
+  PImage planet;//for the planet
   
   //For the the speed and the fuel on the middle of the big circles on each side of the program
   float speed = 0;
@@ -92,12 +93,16 @@ void setup() {
    
    //For the planet in front
    pl = new Planet();
+   
+   //for the planet image
+   planet = loadImage("planet.jpg");
+
 }
 
 
 void draw()
 {
-  background(0);
+  background(0); 
   
   //This will print out the speed and the fuel to the program
   if(keyPressed)
