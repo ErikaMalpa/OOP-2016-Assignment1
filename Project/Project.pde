@@ -20,6 +20,7 @@
   Time ti;//time and date
   Background bg;//For the background
   Clock cl;//For the clock
+  Planet pl;//for the planet
   
   PFont f; //for the font
   
@@ -88,6 +89,9 @@ void setup() {
    
    //for the clock
    cl = new Clock();
+   
+   //For the planet in front
+   pl = new Planet();
 }
 
 
@@ -109,7 +113,6 @@ void draw()
       fuel = fuel - 0.0005;
     }
    }
-   
   t.display();
   ci.display();
   rhs.display();
@@ -121,6 +124,7 @@ void draw()
   // sw.display();
   bg.display();
   ti.display();
+  pl.display();
  
   fill(255);
   textSize(20);
