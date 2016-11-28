@@ -5,18 +5,47 @@
 class Square
 {
   int x = 440;
-  int y = 700;
+  int y = 670;
+  
+  int x2 = x + 160;
+  int x3 = x2 + 570;
+  int x4 = x3 + 160;
   
   void display()
   {
     stroke(#05F6FC);
     
-    //First Square
-    line(x,y,x + 80,y); // top/--
-    line(x,y,x,y+40); // l |
-    line(x,y + 40,x + 20,y + 50); //<
-    line(x + 20,y + 50,x + 100,y + 50); // bot --
-    line(x + 80,y,x + 100,y + 10); // >
-    line(x + 100,y + 10,x + 100,y + 50); // r |
+    //First Rectangle
+    line(x,y,x + 110,y); // top/--
+    line(x,y,x,y+60); // l |
+    line(x,y + 60,x + 40,y + 80); //<
+    line(x + 40,y + 80,x + 130,y + 80); // bot --
+    line(x + 110,y,x + 140,y + 50); // >
+    line(x + 140,y + 50,x + 130,y + 80); // r |
+    
+    //Second Rectangle
+    line(x2,y,x2 + 110,y); // top/--
+    line(x2,y,x2,y+60); // l |
+    line(x2,y + 60,x2 + 40,y + 80); //<
+    line(x2 + 40,y + 80,x2 + 130,y + 80); // bot --
+    line(x2 + 110,y,x2 + 140,y + 50); // >
+    line(x2 + 140,y + 50,x2 + 130,y + 80); // r |
+    
+    //Third Rectangle
+    line(x3,y,x3 + 110,y); // top/--
+    line(x3,y,x3,y+60); // l |
+    line(x3,y + 60,x3 + 40,y + 80); //<
+    line(x3 + 40,y + 80,x3 + 130,y + 80); // bot --
+    line(x3 + 110,y,x3 + 140,y + 50); // >
+    line(x3 + 140,y + 50,x3 + 130,y + 80); // r |
+    
+    //Fourth Rectangle
+    line(x4,y,x4 + 110,y); // top/--
+    line(x4,y,x4,y+60); // l |
+    line(x4,y + 60,x4 + 40,y + 80); //<
+    line(x4 + 40,y + 80,x4 + 130,y + 80); // bot --
+    line(x4 + 110,y,x4 + 140,y + 50); // >
+    line(x4 + 140,y + 50,x4 + 130,y + 80); // r |
+    
   }
 }
