@@ -18,3 +18,5 @@ Resources used such as music and pictures:
 //arcade - https://www.freesound.org/people/joshuaempyre/sounds/251461/
 
 //website that created the intro voice - http://lingojam.com/RobotVoiceGenerator
+
+//for the planet texture - http://img07.deviantart.net/aa9f/i/2009/161/a/6/planet_texture_by_synthro.jpg
