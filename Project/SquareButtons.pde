@@ -67,5 +67,14 @@ class Square
     arc(x + 220,y + 25,20,20,radians(angle), radians(angle + 180));
     arc(x + 220,y + 25,35,35,radians(angle), radians(angle + 260));
     arc(x + 220,y + 25,50,50,radians(angle), radians(angle + 100));
+    
+    //design for the third button
+    strokeWeight(7);
+    textSize(15);
+    line(x + 730, y, x + 800, y);
+    text("Memo to self:",x + 780, y + 20);
+    text("Buy Ammunition", x + 790, y + 40);
+    
+    //des
   }
 }
