@@ -57,4 +57,29 @@ class Circle
     ellipse(250,cy,csize - 230,csize - 230);//left thing circle
     ellipse(1670,cy,csize - 230,csize - 230);//right thing circle
   }
+  
+  int csize = 350;
+    int angle1 = 1;
+    int angle2 = 2;
+    
+void arcs()
+  {
+    stroke(#1AF5FF);
+    smooth();
+    noFill();
+    
+    //int angle3 = 3;
+    
+    angle1 += 1;
+    angle2 += 2;
+    //angle3 += 3;
+    
+    //for the left
+    arc(250,840,csize,csize, radians(angle1), radians(angle1+300));
+    arc(250,840,csize - 30,csize - 30, radians(angle2), radians(angle2+200));
+    
+    //for the right
+    arc(1670,840,csize,csize, radians(-angle1), radians(-angle1+300));
+    arc(1670,840,csize - 30,csize - 30, radians(-angle2), radians(-angle2+200));
+  }
 }

@@ -71,6 +71,8 @@ void setup() {
    radar.loop();
    intro.play();
    
+   loop();
+   
    //for the moving text
    t = new Text();
    
@@ -188,4 +190,6 @@ void draw()
         point(h, l);
       }
     }
+    
+    ci.arcs();
 }
