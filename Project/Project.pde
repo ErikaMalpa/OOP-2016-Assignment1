@@ -44,6 +44,7 @@
   AudioPlayer stats;//The robot voice for the stats globe 3 of the right hand side
   AudioPlayer profile;//The robot voice for the profile globe 2 of the right hand side
   AudioPlayer mission;//The robot voice for the mission globe 1 of the right hand side
+  AudioPlayer woobwoob;//backgground sound so it seems like the engine is on
   Minim minim;
 
 void setup() {
@@ -71,6 +72,8 @@ void setup() {
    stats = minim.loadFile("stats.wav");
    profile = minim.loadFile("profile.wav");
    mission = minim.loadFile("mission.wav");
+   woobwoob = minim.loadFile("woobwoob.wav");
+   woobwoob.loop();
    radar.loop();
    intro.play();
    
