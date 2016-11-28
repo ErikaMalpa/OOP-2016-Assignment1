@@ -76,8 +76,8 @@ void setup() {
    woobwoob = minim.loadFile("woobwoob.wav");
    background = minim.loadFile("background.wav");
    background.loop();
-   radar.loop();
    woobwoob.loop();
+   radar.loop();
    intro.play();
    
    loop();
