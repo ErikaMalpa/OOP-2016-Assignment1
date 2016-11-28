@@ -15,7 +15,7 @@ class Moon
     //rotateY(radians(angle));
     translate(px,py);
     moon = createShape(SPHERE, size);
-    moon.setTexture(planet);
+    moon.setTexture(Moon);
     shape(moon); 
     popMatrix();
     

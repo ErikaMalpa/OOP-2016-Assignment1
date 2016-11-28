@@ -27,7 +27,7 @@
   PFont f; //for the font
   PImage planet;//for the planet
   PImage sp;//For the backkground space
-  PImage moon;//for the moon
+  PImage Moon;//for the moon
   
   //For the the speed and the fuel on the middle of the big circles on each side of the program
   float speed = 0;
@@ -119,7 +119,7 @@ void setup() {
   mo = new Moon();
   
   //for the moon
-  moon = loadImage("moon.jpg");
+  Moon = loadImage("moon.jpg");
 }
 
 
