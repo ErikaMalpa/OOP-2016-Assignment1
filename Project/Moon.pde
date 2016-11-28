@@ -1,25 +1,24 @@
 class Moon
 {
-  int px = 700;
+  int px = 600;
   int py = 500;
-  float angle=90;
   PShape moon;
-  float size = 50;
+  float size = 20;
   float distance = 10000;
+  int angle2 = 1;
   
   void display()
   {
     pushMatrix();
     fill(255);
     noStroke();
-    //rotateY(radians(angle));
+    angle2 += 1;
+    rotateY(radians(angle2));
     translate(px,py);
     moon = createShape(SPHERE, size);
     moon.setTexture(Moon);
     shape(moon); 
     popMatrix();
-    
-    angle+=1;//the speed of the Globe
     
     //This will print out the speed and the fuel to the program
   if(keyPressed)
