@@ -190,6 +190,4 @@ void draw()
         point(h, l);
       }
     }
-    
-    ci.arcs();
 }
