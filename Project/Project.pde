@@ -22,10 +22,12 @@
   Clock cl;//For the clock
   Planet pl;//for the planet
   Square sq;// for the square buttons
+  Moon mo;//for the moon
   
   PFont f; //for the font
   PImage planet;//for the planet
   PImage sp;//For the backkground space
+  PImage moon;//for the moon
   
   //For the the speed and the fuel on the middle of the big circles on each side of the program
   float speed = 0;
@@ -45,7 +47,7 @@
   Minim minim;
 
 void setup() {
-  
+ 
   //I decided it to be full screen because it looks better and used P3D for the globes
   fullScreen(P3D);
   
@@ -106,6 +108,12 @@ void setup() {
   
   //for the background image
   sp = loadImage("space.jpg");
+  
+  //moon display
+  mo = new Moon();
+  
+  //for the moon
+  moon = loadImage("moon.jpg");
 }
 
 
@@ -143,6 +151,7 @@ void draw()
   ti.display();
   sq.display();
   sq.design();
+  mo.display();
   
   fill(255);
    textSize(20);
