@@ -33,5 +33,17 @@ class Radar
     line(950, 850, cx,cy);
     
     angle -= speed;
+    
+    if(mousePressed)
+    {
+      if(mouseX > 900 && mouseX < 950 && mouseY > 800 && mouseY < 900)
+      {
+        radar.pause();
+      }
+      if(mouseX > 950 && mouseX < 1000 && mouseY > 800 && mouseY < 900)
+      {
+        radar.loop();
+      }
+    }
   }
 }
