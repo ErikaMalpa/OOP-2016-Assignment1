@@ -53,11 +53,19 @@ class Square
   {
     int x = 450;
     int y = 680;
+    int angle = 1;
     
     //design for the first button
     strokeWeight(5);
     line(x,y,x+80,y);
     line(x,y + 20,x+50,y + 20);
     line(x,y + 40,x+20,y + 40);
+    
+    //design for the second button
+    strokeWeight(4);
+    noFill();
+    arc(x + 220,y + 25,20,20,radians(angle), radians(angle + 180));
+    arc(x + 220,y + 25,35,35,radians(angle), radians(angle + 260));
+    arc(x + 220,y + 25,50,50,radians(angle), radians(angle + 100));
   }
 }
