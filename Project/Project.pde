@@ -25,6 +25,7 @@
   
   PFont f; //for the font
   PImage planet;//for the planet
+  PImage sp;//For the backkground space
   
   //For the the speed and the fuel on the middle of the big circles on each side of the program
   float speed = 0;
@@ -102,12 +103,15 @@ void setup() {
   
   //for the square
   sq = new Square();
+  
+  //for the background image
+  sp = loadImage("space.jpg");
 }
 
 
 void draw()
 {
-  background(0); 
+  background(sp); 
   
   //This will print out the speed and the fuel to the program
   if(keyPressed)
