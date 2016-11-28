@@ -145,14 +145,26 @@ class Button
  
   //This is for the little circles around
   void Button2()
-  { 
-    int cy = 30;
+  {
     int csize = 5;
-    noStroke();
-    fill(#F7F3D2);
-    ellipse(400,cy,csize,csize);//left thing circle
-    fill(#80F0E5);
-    arc(400,cy,csize,csize, HALF_PI, PI);
-    arc(400,cy,csize,csize, PI+QUARTER_PI, TWO_PI);
+    for (int x = 440; x < 750; x = x+10) 
+    {
+      for (int y = 900;y < 1050; y = y+10) 
+      {
+        noStroke();
+        fill(random(0,255));
+        ellipse(x,y,csize,csize);
+      }
+    }
+    
+    for (int x = 1170; x < 1490; x = x+10) 
+    {
+      for (int y = 900;y < 1050; y = y+10) 
+      {
+        noStroke();
+        fill(random(0,255));
+        ellipse(x,y,csize,csize);
+      }
+    }
   }
 }
