@@ -25,11 +25,13 @@ class Planet
   {
     if(key == 'w' || key == 'W' )
     {
-      size = size + 0.5;;
+      size = size + 0.05;
+      distance --;
     }
     if(key == 's' || key == 'S' )
     {
-      size = size - 0.5;
+      size = size - 0.05;
+      distance ++;
     }
    }
     

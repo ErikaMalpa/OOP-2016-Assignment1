@@ -32,6 +32,7 @@
   //For the the speed and the fuel on the middle of the big circles on each side of the program
   float speed = 0;
   float fuel = 10000;
+  int distance = 10000;
 
   //sound, I have used minim, all sounds used or resource used to make sounds are in the read me file
   import ddf.minim.*;
@@ -134,11 +135,13 @@ void draw()
     {
       speed = speed + 0.5;
       fuel = fuel - 0.0005;
+      distance --;
     }
     if(key == 's' || key == 'S' )
     {
       speed = speed - 0.1;
       fuel = fuel - 0.0005;
+      distance ++;
     }
    }
    
@@ -163,6 +166,9 @@ void draw()
    textSize(20);
    text( speed, 250, 850);
    text( fuel, 1670, 850);
+   text(distance,width/2,615);
+   textSize(15);
+   text("Distance left until destination is reached",width/2,600);
   
 
   fill(#03F4FF);
