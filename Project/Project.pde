@@ -21,6 +21,7 @@
   Background bg;//For the background
   Clock cl;//For the clock
   Planet pl;//for the planet
+  Square sq;// for the square buttons
   
   PFont f; //for the font
   PImage planet;//for the planet
@@ -96,7 +97,9 @@ void setup() {
    
    //for the planet image
    planet = loadImage("planet.jpg");
-
+  
+  //for the square
+  sq = new Square();
 }
 
 
@@ -129,9 +132,10 @@ void draw()
   bu.mouseover();
   bu.Button2();
   rad.show();
-  // sw.display();
+  //sw.display();
   bg.display();
   ti.display();
+  sq.display();
   
   fill(255);
    textSize(20);
