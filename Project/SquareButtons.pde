@@ -75,6 +75,9 @@ class Square
     text("Memo to self:",x + 780, y + 20);
     text("Buy Ammunition", x + 790, y + 40);
     
-    //des
+    //design for the fourth button
+    line(x + 890, y, x + 960, y);
+    text("Money", x + 920,y + 20);
+    text("¬5000", x + 920,y + 40);
   }
 }
