@@ -3,16 +3,16 @@
 */
 
 class Square
-{
-  int x = 440;
-  int y = 670;
-  
-  int x2 = x + 160;
-  int x3 = x2 + 570;
-  int x4 = x3 + 160;
-  
+{  
   void display()
   {
+    int x = 440;
+    int y = 670;
+  
+    int x2 = x + 160;
+    int x3 = x2 + 570;
+    int x4 = x3 + 160;
+  
     stroke(#05F6FC);
     
     //First Rectangle
@@ -47,5 +47,17 @@ class Square
     line(x4 + 110,y,x4 + 140,y + 50); // >
     line(x4 + 140,y + 50,x4 + 130,y + 80); // r |
     
+  }
+  
+  void design()
+  {
+    int x = 450;
+    int y = 680;
+    
+    //design for the first button
+    strokeWeight(5);
+    line(x,y,x+80,y);
+    line(x,y + 20,x+50,y + 20);
+    line(x,y + 40,x+20,y + 40);
   }
 }

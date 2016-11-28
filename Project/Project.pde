@@ -136,6 +136,7 @@ void draw()
   bg.display();
   ti.display();
   sq.display();
+  sq.design();
   
   fill(255);
    textSize(20);
