@@ -3,6 +3,8 @@ C15339871-OOP-Assignment1
 
 Hi this is Erika Secillano and this is my OOP assignment 1!
 
+I imagined that the user is a pilot and that you have a mission to eliminate this alien and you must go to the planet where it lives.
+
 The youtube video : https://www.youtube.com/watch?v=Ku-ot0f7L3s
 
 Resources used such as music and pictures:
