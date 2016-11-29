@@ -25,7 +25,7 @@ class Circle
     
     fill(#41F7BC);
     pushMatrix();
-    //circle going areound the radar
+    //circle going around the radar
     float circle_size = random(5,15);
     translate(width/2,850);
     rotate(b);
@@ -48,6 +48,7 @@ class Circle
     a = a - 0.2;
     b = b - 0.2;
     
+    //the speed and the fuel ellipses and arcs
     noStroke();
     ellipse(250,cy,csize,csize);//left thing circle
     ellipse(1670,cy,csize,csize);//right thing circle

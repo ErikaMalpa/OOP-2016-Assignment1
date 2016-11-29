@@ -7,7 +7,7 @@
 
 /*
   About this assignment:
-  I decided to create a UI for a pilot of a spaceship, you're on a mision to eliminate Miko the alien that is living in the planet H85fu <which i just randomly typed in my keyboard>. let's just say you're a space agent! 
+  I decided to create a UI for a pilot of a spaceship, you're on a mision to eliminate Miko the alien that is living in the planet H85fu <which i just randomly typed in my keyboard>. Let's just say you're a space agent! 
 */
 
   //Classes I used 
@@ -189,7 +189,7 @@ void draw()
   line(1910,10,1910,1070);//right blue
   stroke(#F6FF03);//yellow
   strokeWeight(1);
-  line(20,20,1900,20);//uppe yellow
+  line(20,20,1900,20);//upper yellow
   line(20,1060,1900,1060);//lower yellow
   line(20,20,20,1060);//left yellow
   line(1900,20,1900,1060);//right yellow

@@ -144,7 +144,7 @@ class Button
       }
   }
  
-  //This is for the little circles
+  //This is for the little circles at the bottom
   void Button2()
   {
     int csize = 5;

@@ -19,7 +19,7 @@ class Moon
     shape(moon); 
     popMatrix();
     
-    //This will print out the speed and the fuel to the program
+    //The size will increase or decrease
     if(keyPressed)
     {
       if(key == 'w' || key == 'W' )
