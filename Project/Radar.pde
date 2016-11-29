@@ -34,6 +34,7 @@ class Radar
     
     angle -= speed;
     
+    //so that the user can stop or play the radar
     if(mousePressed)
     {
       if(mouseX > 900 && mouseX < 950 && mouseY > 800 && mouseY < 900)
