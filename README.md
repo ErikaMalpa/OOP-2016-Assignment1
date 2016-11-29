@@ -42,3 +42,12 @@ How my assignment works:
     - 4. Will play a relaxing music that will be handy when the user will cruise around the space.
     - 5. Will stop both songs and the robot voices (activated when the three globes on the right is clicked).
     - 6. Will play an arcade song that is good when in combat.
+    
+2. There are 3 Globes on the right that is rotating, when you hover your mouse over it. It will make a sound and also what will it show. When all of them are clicked there will be a robbot voice reading it for you. If you want them to stop reading it for you. You must stop it by pressing the 5th blur circle button.
+    - 1. Will show your mission.
+    - 2. Will show your target.
+    - 3. Will show your spaceship status.
+    
+3. The radar will automatically be playing a sound. If you want to pause it click the left side of the middle ellipse and if you want to play it again click the right side of the middle ellipse.
+
+4. Press W and S to "move forward and backwards", the "speed" will be shown on the left ellipse and the "fuel" on the right. As you press w and s the moon and the planet will go big as if you're going towards it.
