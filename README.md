@@ -5,21 +5,33 @@ Hi this is Erika Secillano and this is my OOP assignment 1!
 
 Resources used such as music and pictures:
 
+//Sounds Used
+
 //for the laser = https://www.freesound.org/people/jeremysykes/sounds/341235/
 
 //for the ambient2 song = https://www.freesound.org/people/cheesepuff/sounds/110215/
 
 //sound for the radar =https://www.freesound.org/people/thomasevd/sounds/125374/
 
-//source for the image https://upload.wikimedia.org/wikipedia/commons/f/fd/Alien_head_2.jpg
-
 //source for sounds hover - http://soundbible.com/1669-Robot-Blip-2.html
 
-//arcade - https://www.freesound.org/people/joshuaempyre/sounds/251461/
+//arcade sound - https://www.freesound.org/people/joshuaempyre/sounds/251461/
 
-//website that created the intro voice - http://lingojam.com/RobotVoiceGenerator
+//for the woob woob sound in th background - https://www.freesound.org/people/Ideacraft/sounds/345110/
+
+//website that created the intro,stats,profile & mission voice - http://lingojam.com/RobotVoiceGenerator
+
+//for the background ambient song - https://www.freesound.org/people/tec%20studios/sounds/366662/
+
+//Images used
 
 //for the planet texture - http://img07.deviantart.net/aa9f/i/2009/161/a/6/planet_texture_by_synthro.jpg
+
+//for the moon texture - https://upload.wikimedia.org/wikipedia/commons/2/21/Rhea_Color_Map.jpg
+
+//for the background space image- https://upload.wikimedia.org/wikipedia/commons/2/2c/Milkyway-galaxy-sky-stars_-_West_Virginia_-_ForestWander.jpg
+
+//source for the alien image https://upload.wikimedia.org/wikipedia/commons/f/fd/Alien_head_2.jpg
 
 How my assignment works:
 
