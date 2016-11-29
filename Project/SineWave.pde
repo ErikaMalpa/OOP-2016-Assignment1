@@ -1,5 +1,5 @@
 /*
-  A simple sinewav for design
+  A simple sinewave for design
 */
 
 class SineWave

@@ -7,7 +7,7 @@
 
 /*
   About this assignment:
-  I decided to create a UI for a pilot of a spaceship
+  I decided to create a UI for a pilot of a spaceship, you're on a mision to eliminate Miko the alien that is living in the planet H85fu <which i just randomly typed in my keyboard>. let's just say you're a space agent! 
 */
 
   //Classes I used 
@@ -24,7 +24,7 @@
   Square sq;//For the "rectangle" buttons
   Moon mo;//For the moon for the planet
   
-  //Fonts and images used
+  //Fonts and images used, Image resources in the read me file
   PFont f; //for the font
   PImage planet;//for the planet
   PImage sp;//For the backkground space
@@ -36,7 +36,7 @@
   float fuel = 10000;
   int distance = 10000;
 
-  //sound, I have used minim, all sounds used or resource used to make sounds are in the read me file
+  //sounds, I have used minim, all sounds used or resource used to make sounds are in the read me file
   import ddf.minim.*;
   AudioPlayer hover;//hover sound for the "RightHandSide" Globes
   AudioPlayer backgroundSong;//Arcade song
@@ -59,12 +59,6 @@ void setup() {
   //The font I decided to use
   f = createFont("Bauhaus93",50,true);
   
-  //circle
-  ci = new Circle();
-  
-  //Right hand side globes
-  rhs = new RightHandSide();
-  
   //sounds I used
    minim = new Minim(this);
    hover = minim.loadFile("click.mp3");
@@ -81,9 +75,15 @@ void setup() {
    background.loop();
    woobwoob.loop();
    radar.loop();
-   intro.play();
+   intro.play();//"WELCOME BACK etc."
    
    loop();
+  
+  //circle
+  ci = new Circle();
+  
+  //Right hand side globes
+  rhs = new RightHandSide();
    
    //for the moving text
    t = new Text();
@@ -112,7 +112,7 @@ void setup() {
    //for the planet image
    planet = loadImage("planet.jpg");
   
-   //for the square
+   //for the 4 blue rectangles 
    sq = new Square();
   
    //for the background image
@@ -121,7 +121,7 @@ void setup() {
    //moon display
    mo = new Moon();
   
-   //for the moon
+   //for the moon image
    Moon = loadImage("moon.jpg");
 }
 
@@ -130,7 +130,7 @@ void draw()
 {
   background(sp); 
   
-  //This will print out the speed and the fuel to the program
+  //This will increase and decrease the speed, the fuel and the distance
   if(keyPressed)
   {
     if(key == 'w' || key == 'W' )
@@ -147,7 +147,7 @@ void draw()
     }
    }
   
-  
+  //all the classes called here
   sw.display();
   pl.display();
   t.display();
@@ -165,6 +165,7 @@ void draw()
   sq.design();
   mo.display();
   
+  //for the speed/fuel and distance printed in screen
   fill(255);
   textSize(20);
   text( speed, 250, 850);
@@ -173,7 +174,7 @@ void draw()
   textSize(15);
   text("Distance left until destination is reached",width/2,600);
   
-
+  //The name of the spaceship shown
   fill(#03F4FF);
   textAlign(CENTER);
   textSize(20);
@@ -181,15 +182,15 @@ void draw()
     
   //for the sides around the screen
   strokeWeight(2);
-  stroke(#03F4FF);//blue
-  line(10, 10, 1910, 10);//upper dot blue
-  line(10, 1070, 1910, 1070);//lower dot blue
+  stroke(#03F4FF);
+  line(10, 10, 1910, 10);//upper blue
+  line(10, 1070, 1910, 1070);//lower blue
   line(10,10,10,1070);//left blue
   line(1910,10,1910,1070);//right blue
   stroke(#F6FF03);//yellow
   strokeWeight(1);
-  line(20,20,1900,20);//upper dot yellow
-  line(20,1060,1900,1060);//lower dot yellow
+  line(20,20,1900,20);//uppe yellow
+  line(20,1060,1900,1060);//lower yellow
   line(20,20,20,1060);//left yellow
   line(1900,20,1900,1060);//right yellow
   

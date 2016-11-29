@@ -8,6 +8,7 @@ class Circle
   float b = 0; // to rotate circle
   
   float csize = 350;
+  float cy = 840;
   int angle1 = 1;
   int angle2 = 2;
   int angle3 = 3;
@@ -24,7 +25,7 @@ class Circle
     
     fill(#41F7BC);
     pushMatrix();
-    //circle
+    //circle going areound the radar
     float circle_size = random(5,15);
     translate(width/2,850);
     rotate(b);
@@ -47,33 +48,30 @@ class Circle
     a = a - 0.2;
     b = b - 0.2;
     
-    //for the two circle
-    float cy = 840;
-    
     noStroke();
     ellipse(250,cy,csize,csize);//left thing circle
     ellipse(1670,cy,csize,csize);//right thing circle
     //for the left
     fill(#04ADB4);
-    arc(250,840,csize,csize, radians(angle1), radians(angle1+100));
+    arc(250,cy,csize,csize, radians(angle1), radians(angle1+100));
     fill(#B3EFF2);
-    arc(250,840,csize - 30,csize - 30, radians(-angle2), radians(-angle2+100));
+    arc(250,cy,csize - 30,csize - 30, radians(-angle2), radians(-angle2+100));
     //for the right
     fill(#04ADB4);
-    arc(1670,840,csize,csize, radians(-angle1), radians(-angle1+100));
+    arc(1670,cy,csize,csize, radians(-angle1), radians(-angle1+100));
     fill(#B3EFF2);
-    arc(1670,840,csize - 30,csize - 30, radians(angle2), radians(angle2+100));
+    arc(1670,cy,csize - 30,csize - 30, radians(angle2), radians(angle2+100));
     fill(#DDDED9);
     arc(250,cy,csize - 50,csize -50,radians(-angle3), radians(-angle3+60));
     arc(1670,cy,csize - 50,csize - 50, radians(angle3), radians(angle3+60));
     fill(#0DFFF1);
-    ellipse(250,cy,csize - 100,csize - 100);//left rhing circle
-    ellipse(1670,cy,csize - 100,csize - 100);//right thing circle
+    ellipse(250,cy,csize - 100,csize - 100);//left circle
+    ellipse(1670,cy,csize - 100,csize - 100);//right circle
     fill(#137463);
     arc(250,cy,csize - 100,csize - 100, 0, HALF_PI + QUARTER_PI);
     arc(1670,cy,csize - 100,csize - 100, 0, HALF_PI + QUARTER_PI);
     fill(0);   //middle circle
-    ellipse(250,cy,csize - 230,csize - 230);//left thing circle
-    ellipse(1670,cy,csize - 230,csize - 230);//right thing circle
+    ellipse(250,cy,csize - 230,csize - 230);//left circle
+    ellipse(1670,cy,csize - 230,csize - 230);//right circle
   }
 }

@@ -1,5 +1,5 @@
 /*
-  This is for 6 square-ishes
+  This is for 6 rectangle-ishes
 */
 
 class Square

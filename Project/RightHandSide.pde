@@ -51,7 +51,7 @@ class RightHandSide
   {
     //1st Globe
     pushMatrix();
-    if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
+    if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)//will play a hover sound when the mouse is over it and will display a line and mission text
     {
       stroke(#F2FA23);
       line(1650,150,1740,150);
@@ -64,7 +64,7 @@ class RightHandSide
   
    if (mousePressed)
   {
-    if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)
+    if(mouseX > 1700 && mouseX < 1900 && mouseY > 100 && mouseY <200)//when clicked will display text and also will read it for you when mouse is released
     {
       fill(0);
       stroke(255);
@@ -84,7 +84,7 @@ class RightHandSide
     //2nd Globe
      if (mousePressed)
   {
-    if(mouseX > 1700 && mouseX < 1900 && mouseY > 300 && mouseY <400)
+    if(mouseX > 1700 && mouseX < 1900 && mouseY > 300 && mouseY <400)//when clicked will display text and also will read it for you when mouse is released
     {
       fill(255);
       textSize(20);
@@ -101,7 +101,7 @@ class RightHandSide
   }
   
   pushMatrix();
-  if(mouseX > 1700 && mouseX < 1900 && mouseY > 300 && mouseY <400)
+  if(mouseX > 1700 && mouseX < 1900 && mouseY > 300 && mouseY <400)//will play a hover sound when the mouse is over it and will display a line and target text
     {
       stroke(#F2FA23);
       line(1650,350,1740,350);
@@ -115,7 +115,7 @@ class RightHandSide
     //3rd Globe
     if (mousePressed)
   {
-    if(mouseX > 1700 && mouseX < 1900 && mouseY > 500 && mouseY <600)
+    if(mouseX > 1700 && mouseX < 1900 && mouseY > 500 && mouseY <600)//when clicked will display text and also will read it for you when mouse is released
     {
       fill(255);
       textSize(30);
@@ -129,7 +129,7 @@ class RightHandSide
   }
   
    pushMatrix();
-  if(mouseX > 1700 && mouseX < 1900 && mouseY > 500 && mouseY <600)
+  if(mouseX > 1700 && mouseX < 1900 && mouseY > 500 && mouseY <600)//will play a hover sound when the mouse is over it and will display a line and stats text
     {
       stroke(#F2FA23);
       line(1650,550,1740,550);

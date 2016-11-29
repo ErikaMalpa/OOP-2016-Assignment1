@@ -52,7 +52,7 @@ class Button
         textSize(10);
         text("Laser",mouseX,mouseY);
       }
-       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would be the 
+       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would show the pie chart storage
       {
         Storages(400,storage);
         textSize(30);
@@ -109,6 +109,7 @@ class Button
     }
   }
   
+  //Just mouse over, if user is hovering the blue circles, it will show show some text for explanation
   void mouseover()
   {
     if(mouseX > 460 && mouseX < 540 && mouseY > 790 && mouseY < 850)//this would be the laser and the first button, this will play a laser sound as well
@@ -116,8 +117,8 @@ class Button
         textSize(15);
         text("Laser",mouseX,mouseY);
       }
-       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would be the 
-      {
+       if(mouseX > 460 + 100 && mouseX < 540 + 100 && mouseY > 790 && mouseY < 850)//this would display Storage
+       {
         textSize(15);
         text("Storage",mouseX,mouseY);
       }
@@ -143,10 +144,11 @@ class Button
       }
   }
  
-  //This is for the little circles around
+  //This is for the little circles
   void Button2()
   {
     int csize = 5;
+    //left
     for (int x = 440; x < 750; x = x+10) 
     {
       for (int y = 900;y < 1050; y = y+10) 
@@ -156,7 +158,7 @@ class Button
         ellipse(x,y,csize,csize);
       }
     }
-    
+    //right
     for (int x = 1170; x < 1490; x = x+10) 
     {
       for (int y = 900;y < 1050; y = y+10) 
