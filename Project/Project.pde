@@ -10,26 +10,28 @@
   I decided to create a UI for a pilot of a spaceship
 */
 
-
-  Circle ci;//for the circle
+  //Classes I used 
+  Circle ci;//For the circle
   RightHandSide rhs;//for the globes on the right hand side
   Text t;//For the text moving across
-  Button bu;//for the 6 buttons
-  Radar rad;//for the radar
-  //SineWave sw;
-  Time ti;//time and date
+  Button bu;//For the 6 buttons
+  Radar rad;//For the radar
+  SineWave sw;//For the sine wave
+  Time ti;//For time and date
   Background bg;//For the background
   Clock cl;//For the clock
-  Planet pl;//for the planet
-  Square sq;// for the square buttons
-  Moon mo;//for the moon
+  Planet pl;//For the planet
+  Square sq;//For the "rectangle" buttons
+  Moon mo;//For the moon for the planet
   
+  //Fonts and images used
   PFont f; //for the font
   PImage planet;//for the planet
   PImage sp;//For the backkground space
   PImage Moon;//for the moon
   
   //For the the speed and the fuel on the middle of the big circles on each side of the program
+  //Also the distance from the "planet"
   float speed = 0;
   float fuel = 10000;
   int distance = 10000;
@@ -93,7 +95,7 @@ void setup() {
    rad = new Radar();
    
    //sinewave
-   //sw = new SineWave();
+   sw = new SineWave();
    
    //time
    ti = new Time();
@@ -110,17 +112,17 @@ void setup() {
    //for the planet image
    planet = loadImage("planet.jpg");
   
-  //for the square
-  sq = new Square();
+   //for the square
+   sq = new Square();
   
-  //for the background image
-  sp = loadImage("space.jpg");
+   //for the background image
+   sp = loadImage("space.jpg");
+   
+   //moon display
+   mo = new Moon();
   
-  //moon display
-  mo = new Moon();
-  
-  //for the moon
-  Moon = loadImage("moon.jpg");
+   //for the moon
+   Moon = loadImage("moon.jpg");
 }
 
 
@@ -144,7 +146,9 @@ void draw()
       distance ++;
     }
    }
-   
+  
+  
+  sw.display();
   pl.display();
   t.display();
   ci.display();
@@ -155,7 +159,6 @@ void draw()
   bu.mouseover();
   bu.Button2();
   rad.show();
-  //sw.display();
   bg.display();
   ti.display();
   sq.display();
@@ -163,12 +166,12 @@ void draw()
   mo.display();
   
   fill(255);
-   textSize(20);
-   text( speed, 250, 850);
-   text( fuel, 1670, 850);
-   text(distance,width/2,615);
-   textSize(15);
-   text("Distance left until destination is reached",width/2,600);
+  textSize(20);
+  text( speed, 250, 850);
+  text( fuel, 1670, 850);
+  text(distance,width/2,615);
+  textSize(15);
+  text("Distance left until destination is reached",width/2,600);
   
 
   fill(#03F4FF);
