@@ -1,3 +1,7 @@
+/*
+  added a moon that orbits the planet
+*/
+
 class Moon
 {
   int px = 600;

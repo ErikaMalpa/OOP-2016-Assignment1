@@ -19,10 +19,6 @@ class Circle
     fill(#9FE6E8);
     noStroke();
     
-    angle1 += 1;
-    angle2 += 2;
-    angle3 += 3;
-    
     fill(#41F7BC);
     pushMatrix();
     //circle going around the radar
@@ -47,6 +43,11 @@ class Circle
     r = r + 1;
     a = a - 0.2;
     b = b - 0.2;
+    
+    //to rotate the arcs
+    angle1 += 1;
+    angle2 += 2;
+    angle3 += 3;
     
     //the speed and the fuel ellipses and arcs
     noStroke();
