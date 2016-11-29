@@ -4,7 +4,7 @@
 
 class Moon
 {
-  int px = 600;
+  float px = 600;
   int py = 500;
   PShape moon;
   float size = 20;
@@ -29,10 +29,12 @@ class Moon
       if(key == 'w' || key == 'W' )
       {
         size = size + 0.05;
+        px  = px + 0.5; // I decided to increase and decrease the x because when the planet increases the moon "crashes" or goes in the planet which is not good
       }
     if(key == 's' || key == 'S' )
       {
         size = size - 0.05;
+        px = px - 0.5;
       }
     }
   }
