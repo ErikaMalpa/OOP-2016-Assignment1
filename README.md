@@ -35,6 +35,8 @@ Resources used such as music and pictures:
 
 How my assignment works:
 
+I highly recommend you wear headphones for the ambience!
+
 1. There are 6 circle buttons that is blue. 
     - 1. Will be the "laser".
     - 2. Will show a pise chart which shows the user's "storage".
@@ -50,4 +52,4 @@ How my assignment works:
     
 3. The radar will automatically be playing a sound. If you want to pause it click the left side of the middle ellipse and if you want to play it again click the right side of the middle ellipse.
 
-4. Press W and S to "move forward and backwards", the "speed" will be shown on the left ellipse and the "fuel" on the right. As you press w and s the moon and the planet will go big as if you're going towards it.
+4. Press W and S to "move forward and backwards", the "speed" will be shown on the left ellipse and the "fuel" on the right. As you press w and s the moon and the planet will go big as if you're going towards it. Also the distance will increase if you press s and decrease as you press w as you are going close to it.
